@@ -1,0 +1,34 @@
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import Button from '../components/ui/Button';
+
+const NotFoundPage = () => {
+  const { t } = useTranslation();
+  
+  return (
+    <div className="min-h-[75vh] flex items-center justify-center bg-neutral-background px-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-center max-w-lg"
+      >
+        <h1 className="text-9xl font-serif font-bold text-brand-primary mb-4">
+          404
+        </h1>
+        <h2 className="text-2xl font-medium text-neutral-title mb-6">
+          Page Not Found
+        </h2>
+        <p className="text-neutral-text mb-8">
+          The page you are looking for doesn't exist or has been moved.
+        </p>
+        <Button as={Link} to="/" size="lg">
+          Return to Home Page
+        </Button>
+      </motion.div>
+    </div>
+  );
+};
+
+export default NotFoundPage;
