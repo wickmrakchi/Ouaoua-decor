@@ -32,7 +32,7 @@ export function Contact() {
   *${formData.message}*
 `; 
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    window.open(`https://wa.me/212679443583?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/212616893097?text=${encodedMessage}`, '_blank');
   };
 
   const handleWhatsAppClick = () => {
